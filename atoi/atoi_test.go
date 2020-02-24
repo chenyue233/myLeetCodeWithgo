@@ -17,3 +17,9 @@ func TestMyAtoi(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkMyAtoi(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		MyAtoi("-000001")
+	}
+}

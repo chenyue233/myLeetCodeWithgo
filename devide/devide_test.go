@@ -39,3 +39,15 @@ func TestDivide(t *testing.T) {
 		}
 	}
 }
+
+func BenchmarkDevidewithSub(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		DevidewithSub(-1000000, 2)
+	}
+}
+
+func BenchmarkDivide(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Divide(17, 1)
+	}
+}
