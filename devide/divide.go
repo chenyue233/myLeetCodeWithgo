@@ -1,7 +1,8 @@
 package devide
 
-//力扣29 两数相除
 // DevidewithSub 用减法做两数相除
+// 力扣29 两数相除
+
 func DevidewithSub(dividend int, divisor int) int {
 	var flags bool
 	switch {
@@ -23,7 +24,7 @@ func DevidewithSub(dividend int, divisor int) int {
 	result := 0
 	for dividend >= divisor {
 		dividend -= divisor
-		result += 1
+		result++
 	}
 	if !flags {
 		result = -result
