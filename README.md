@@ -1,0 +1,2 @@
+# myLeetCodeWithgo
+用go刷leetcode的答案及过程，会结合别人go的实现或者python的实现
