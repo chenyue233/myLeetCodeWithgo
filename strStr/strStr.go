@@ -11,15 +11,28 @@ func strStr(haystack string, needle string) int {
 	return res
 }
 
-// 自己实现
-func mYstrStr(haystack string, needle string) int {
+// MYstrStr 自己实现
+func MYstrStr(haystack string, needle string) int {
 	needlelen := len(needle)
+	haylen := len(haystack)
+	j := 0
+	i := 0
 	if needlelen == 0 {
 		return 0
 	}
-	for index, _ := range haystack {
-		if haystack[index:needlelen] == needle {
-			return index
+
+	for i < haylen && j < needlelen {
+		if haystack[i] == needle[j] {
+			i++
+			j++
+		} else {
+			i = i - j + 1
+			j = 0
 		}
 	}
+	if j == needlelen {
+		return i - j
+	}
+	return -1
+
 }
