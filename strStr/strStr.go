@@ -17,19 +17,23 @@ func MYstrStr(haystack string, needle string) int {
 	haylen := len(haystack)
 	j := 0
 	i := 0
+	// 边界值
 	if needlelen == 0 {
 		return 0
 	}
-
+	// i或者j只要其中一个超过了字符串的长度立刻就结束循环
 	for i < haylen && j < needlelen {
+		// 两个字符串的从0开始，只要某个字符相等就比较下一个字符
 		if haystack[i] == needle[j] {
 			i++
 			j++
 		} else {
-			i = i - j + 1
+			// 如果不想等，haystack下一个字符与needle第一个字符串对比，直到相等
+			i = i + 1
 			j = 0
 		}
 	}
+	// j是haylen与neelen对比成功的次数，如果成功的次数和neelen的长度相等就返回：总循环的次数i减去成功的次数，就是开始成功的地方
 	if j == needlelen {
 		return i - j
 	}
