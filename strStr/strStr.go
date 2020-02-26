@@ -28,8 +28,9 @@ func MYstrStr(haystack string, needle string) int {
 			i++
 			j++
 		} else {
-			// 如果不想等，haystack下一个字符与needle第一个字符串对比，直到相等
-			i = i + 1
+			// 如果不相等，haystack下一个字符与needle第一个字符串对比，直到相等
+			// 如果对比到一半忽然不相等了，从新开始对比，需要用i-j=0
+			i = i - j + 1
 			j = 0
 		}
 	}

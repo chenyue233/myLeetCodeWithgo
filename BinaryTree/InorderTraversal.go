@@ -1,0 +1,22 @@
+package binarytree
+
+// 力扣94 中序遍历
+
+// TreeNode 定义二叉树
+type TreeNode struct {
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
+}
+
+func inorderTraversal(root *TreeNode) []int {
+	res := []int{}
+	if root == nil {
+		return res
+	}
+
+	inorderTraversal(root.Left)
+	res = append(res, root.Val)
+	res = append(res, inorderTraversal(root.Right)...)
+	return res
+}

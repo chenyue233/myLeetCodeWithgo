@@ -6,5 +6,5 @@ import (
 )
 
 func main() {
-	fmt.Println(strstr.MYstrStr("he111lll", "ll"))
+	fmt.Println(strstr.MYstrStr("BBC ABCDAB ABCDABCDABDE", "ABCDABD"))
 }
