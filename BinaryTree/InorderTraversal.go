@@ -17,6 +17,8 @@ func inorderTraversal(root *TreeNode) []int {
 
 	inorderTraversal(root.Left)
 	res = append(res, root.Val)
+	// ... 语法糖  切片打散传入
 	res = append(res, inorderTraversal(root.Right)...)
 	return res
+
 }

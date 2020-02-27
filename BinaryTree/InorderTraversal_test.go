@@ -34,6 +34,9 @@ func TestinorderTraversal(t *testing.T) {
 		resOfMyFunc := inorderTraversal(value[0])
 		if resOfMyFunc != expected[index] {
 			t.Errorf("expected '%d',but got '%d'", expected[index], resOfMyFunc)
+			
 		}
+
 	}
+
 }
