@@ -1,4 +1,4 @@
-package ispalindrome
+package math
 
 // IsPalindrome 力扣第九题回文数
 func isPalindrome(x int) bool {

@@ -1,4 +1,4 @@
-package devide
+package math
 
 // DevidewithSub 用减法做两数相除
 // 力扣29 两数相除

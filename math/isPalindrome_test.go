@@ -1,4 +1,4 @@
-package ispalindrome
+package math
 
 import (
 	"testing"

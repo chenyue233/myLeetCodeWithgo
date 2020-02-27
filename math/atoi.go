@@ -1,4 +1,4 @@
-package atoi
+package math
 
 import (
 	"math"

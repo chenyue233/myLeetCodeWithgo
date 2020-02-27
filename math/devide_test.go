@@ -1,4 +1,4 @@
-package devide
+package math
 
 import "testing"
 
