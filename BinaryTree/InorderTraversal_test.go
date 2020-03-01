@@ -24,8 +24,8 @@ func TestInorderTraversal(t *testing.T) {
 }
 
 func TestMyInorderTraversal(t *testing.T) {
-	testNode := TreeNode{1, &TreeNode{2, nil, nil}, &TreeNode{3, nil, nil}}
-	expected := [...]int{2, 1, 3}
+	testNode := TreeNode{1, &TreeNode{1, nil, nil}, nil}
+	expected := [...]int{1, 1}
 	res := myinorderTraversal(&testNode)
 	if len(res) != len(expected) {
 		t.Errorf("len(res)!= len(expected),expected '%d',but got '%d'", expected, res)
