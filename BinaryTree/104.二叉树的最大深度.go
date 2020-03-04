@@ -41,10 +41,10 @@ func maxDepthh(root *TreeNode) int {
 		for i := 0; i < len(stack); i++ {
 			node := stack[0]
 			stack = stack[1:]
-			if &node.Left != nil {
+			if node.Left != nil {
 				stack = append(stack, node.Left)
 			}
-			if &node.Right != nil {
+			if node.Right != nil {
 				stack = append(stack, node.Right)
 			}
 		}
