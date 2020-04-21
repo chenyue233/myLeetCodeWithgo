@@ -5,9 +5,9 @@ import (
 	"testing"
 )
 
-func TestSelection(t *testing.T) {
-	Convey("选择排序",t, func() {
-			res := Selection(testArray)
+func TestMergeSort(t *testing.T) {
+	Convey("归并排序",t, func() {
+		res := Selection(testArray)
 		for i,v := range res{
 			So(v,ShouldEqual,resArray[i])
 		}
