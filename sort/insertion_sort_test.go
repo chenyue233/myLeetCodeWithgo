@@ -1,24 +1,26 @@
 package sort
 
 import (
-	"fmt"
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"
+	"fmt"
 )
 
 var(
 	testArray = []int{1,2,31,2,14,42,11}
 	resArray = []int{1,2,2,11,14,31,42}
 )
-func TestInsertionSorts(t *testing.T)  {
+func TestInsertionSort(t *testing.T)  {
 	Convey("插入排序",t, func() {
 		res := InsertionSort(testArray)
-		fmt.Println(res)
-		So(InsertionSort(testArray),ShouldEqual,resArray)
+		for i,v := range res{
+			So(v,ShouldEqual,resArray[i])
+		}
+		
 	})
 }
 
-func TestInsertionSort(t *testing.T) {
+func TestInsertionSorts(t *testing.T) {
 	testArray := [][]int{
 		{1, 2, 1, 15, 25, 111, 2344},
 		{111, 2311, 12, 441111, 12111, 121},
