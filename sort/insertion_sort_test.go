@@ -1,9 +1,9 @@
 package sort
 
 import (
+	"fmt"
 	. "github.com/smartystreets/goconvey/convey"
 	"testing"
-	"fmt"
 )
 
 var(
