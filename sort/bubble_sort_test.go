@@ -21,12 +21,12 @@ func TestBubble(t *testing.T) {
 		{0, 2, 3, 4, 5, 5, 9},
 		{123},
 	}
-	for idx,arr := range testArray {
+	for idx, arr := range testArray {
 		n := len(arr)
 		res := Bubble(arr, n)
-		for i:=0;i<len(res);i++  {
-			if res[i] != expected[idx][i]{
-				t.Errorf("expect:%d,but got:%d",res[i],expected[idx][i])
+		for i := 0; i < len(res); i++ {
+			if res[i] != expected[idx][i] {
+				t.Errorf("expect:%d,but got:%d", res[i], expected[idx][i])
 			}
 		}
 	}

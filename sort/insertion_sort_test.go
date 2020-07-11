@@ -6,17 +6,18 @@ import (
 	"testing"
 )
 
-var(
-	testArray = []int{1,2,31,2,14,42,11}
-	resArray = []int{1,2,2,11,14,31,42}
+var (
+	testArray = []int{1, 2, 31, 2, 14, 42, 11}
+	resArray  = []int{1, 2, 2, 11, 14, 31, 42}
 )
-func TestInsertionSort(t *testing.T)  {
-	Convey("插入排序",t, func() {
-		res := InsertionSort(testArray)
-		for i,v := range res{
-			So(v,ShouldEqual,resArray[i])
+
+func TestInsertionSort(t *testing.T) {
+	Convey("插入排序", t, func() {
+		res := InsertionSorts(testArray, 7)
+		for i, v := range res {
+			So(v, ShouldEqual, resArray[i])
 		}
-		
+
 	})
 }
 
@@ -37,12 +38,12 @@ func TestInsertionSorts(t *testing.T) {
 		{0, 2, 3, 4, 5, 5, 9},
 		{123},
 	}
-	for idx,arr := range testArray {
+	for idx, arr := range testArray {
 		res := InsertionSort(arr)
 		fmt.Println(res)
-		for i:=0;i<len(res);i++  {
-			if res[i] != expected[idx][i]{
-				t.Errorf("expect:%d,but got:%d",res[i],expected[idx][i])
+		for i := 0; i < len(res); i++ {
+			if res[i] != expected[idx][i] {
+				t.Errorf("expect:%d,but got:%d", res[i], expected[idx][i])
 			}
 		}
 	}
