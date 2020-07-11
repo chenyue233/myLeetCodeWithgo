@@ -2,3 +2,4 @@
 /.vscode
 # 忽略 path to a text file that exists
 /path to a text file that exists
+/.idea
